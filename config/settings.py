@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'requirements',
     'faq',
     'pages',
+    'publications',
+    'contacts',
 
 ]
 

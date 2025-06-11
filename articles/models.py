@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
 from categories.models import Category
+from publications.models import Publication
 
 class Article(models.Model):
     STATUS_CHOICES = [
@@ -20,6 +21,7 @@ class Article(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
     views = models.PositiveIntegerField(default=0)
+    publication = models.ForeignKey(Publication, on_delete=models.CASCADE, related_name='articles', null=True, blank=True)
 
     def avg_rating(self):
         reviews = self.reviews.all()

@@ -29,6 +29,9 @@ urlpatterns = [
     path('api/requirements/', include('requirements.urls')),
     path('api/faq/', include('faq.urls')),
     path('api/pages/', include('pages.urls')),
+    path('api/publications/', include('publications.urls')),
+    path('api/contacts/', include('contacts.urls')),
+
 
 
 
